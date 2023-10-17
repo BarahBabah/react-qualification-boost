@@ -1,11 +1,10 @@
 import { Suspense, useContext, useState } from "react";
-import { Counter } from "./components/Counter";
 import { Route, Routes, Link } from "react-router-dom";
-import { AboutPageAsync } from "./Pages/AboutPage/AboutPage.async";
-import { MainPageAsync } from "./Pages/MainPage/MainPage.async";
 import "./styles/index.scss";
-import { ThemeContext } from "./theme/ThemeContext";
-import { useTheme } from "./theme/useTheme";
+import { useTheme } from "./providers/ThemeProvider";
+import { classNames } from "shared/lib/classNames/classNames";
+import { AboutPage } from "Pages/AboutPage";
+import { MainPage } from "Pages/MainPage";
 
 export enum Theme {
   LIGHT = "light",
@@ -15,11 +14,8 @@ export enum Theme {
 function App() {
   const { theme, handleTheme } = useTheme();
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames("app", {}, [theme])}>
       <button onClick={handleTheme}>Сменить тему</button>
-      <Link className="link" to={"/counter"}>
-        Counter
-      </Link>
       <Link className="link" to={"/about"}>
         ABOUT
       </Link>
@@ -28,9 +24,8 @@ function App() {
       </Link>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path={"/counter"} element={<Counter />} />
-          <Route path={"/about"} element={<AboutPageAsync />} />
-          <Route path={"/"} element={<MainPageAsync />} />
+          <Route path={"/about"} element={<AboutPage />} />
+          <Route path={"/"} element={<MainPage />} />
         </Routes>
       </Suspense>
     </div>
