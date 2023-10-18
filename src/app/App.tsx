@@ -1,9 +1,9 @@
-import { Suspense, useContext, useState } from "react";
-import { Route, Routes, Link } from "react-router-dom";
+import React from "react";
 import "./styles/index.scss";
 import { useTheme } from "./providers/ThemeProvider";
 import { classNames } from "shared/lib/classNames/classNames";
 import { AppRouter } from "./providers/router";
+import { Navbar } from "widgets/Navbar";
 export enum Theme {
   LIGHT = "light",
   DARK = "dark",
@@ -14,12 +14,7 @@ function App() {
   return (
     <div className={classNames("app", {}, [theme])}>
       <button onClick={handleTheme}>Сменить тему</button>
-      <Link className="link" to={"/about"}>
-        ABOUT
-      </Link>
-      <Link className="link" to={"/"}>
-        Main
-      </Link>
+      <Navbar />
       <AppRouter />
     </div>
   );
