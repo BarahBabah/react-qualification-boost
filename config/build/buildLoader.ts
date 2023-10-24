@@ -5,6 +5,17 @@ import { BuildOptions } from "./types/config";
 
 // Если не используем тайпскрипт - нужен babel-loader
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
+  const svgLoader = {
+    test: /\.svg$/,
+    use: ["@svgr/webpack"],
+  };
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif)$/i,
+    loader: "file-loader",
+    options: {
+      outputPath: "images",
+    },
+  };
   const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -33,5 +44,5 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     exclude: /node_modules/,
   };
 
-  return [typescriptLoader, cssLoader];
+  return [fileLoader, svgLoader, typescriptLoader, cssLoader];
 }
