@@ -1,2 +1,3 @@
-import LangSwitcher from "./ul/LangSwitcher";
+import LangSwitcher from './ul/LangSwitcher';
+
 export { LangSwitcher };

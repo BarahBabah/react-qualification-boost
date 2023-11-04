@@ -1,2 +1,3 @@
-import AppRouter from "./ul/AppRouter";
+import AppRouter from './ul/AppRouter';
+
 export { AppRouter };

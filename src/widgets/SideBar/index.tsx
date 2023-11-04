@@ -1,2 +1,3 @@
-import SideBar from "./ul/SideBar/SideBar";
+import SideBar from './ul/SideBar/SideBar';
+
 export { SideBar };
