@@ -5,17 +5,11 @@ import { classNames } from "shared/lib/classNames/classNames";
 import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/Navbar";
 import { SideBar } from "widgets/SideBar";
-import i18n from "shared/config/i18n/i18n";
-import { useTranslation } from "react-i18next";
+import { LangSwitcher } from "widgets/LangSwitcher";
 export enum Theme {
   LIGHT = "light",
   DARK = "dark",
 }
-
-const Component = () => {
-  const { t, i18n } = useTranslation();
-  return <div{ t("")}></div>
-};
 
 function App() {
   const { theme } = useTheme();
