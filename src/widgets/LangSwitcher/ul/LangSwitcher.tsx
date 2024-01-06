@@ -21,7 +21,7 @@ const LangSwitcher = ({ className }: LangSwitcherProps) => {
             theme={ThemeButton.CLEAR}
             onClick={() => onClick()}
         >
-            {t('Язык')}
+            {t('language')}
         </Button>
     );
 };

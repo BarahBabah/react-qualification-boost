@@ -1,11 +1,15 @@
+import { BugButton } from 'app/providers/ErrorBoundary';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const MainPage = () => {
-    const { t, i18n } = useTranslation('main');
+    const { t } = useTranslation('main');
 
     return (
-        <div>{t('Главная страница')}</div>
+        <div>
+            <BugButton />
+            <div>{t('MainPage')}</div>
+        </div>
     );
 };
 

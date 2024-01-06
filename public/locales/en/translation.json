@@ -1,6 +1,7 @@
 {
-  "Тестовый пример": "test example",
-  "Перевод": "Translate",
-  "Язык": "English",
-  "pagenotfound": "страница не найден"
+  "Translate": "Translate",
+  "language": "English",
+  "An unexpected error has occurred": "An unexpected error has occurred",
+  "reload the page": "reload the page",
+  "throw error": "error"
 }
