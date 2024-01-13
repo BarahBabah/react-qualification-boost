@@ -3,5 +3,6 @@
   "language": "Русский",
   "An unexpected error has occurred": "Произошла непредвиденная ошибка",
   "reload the page": "перезагрузить страницу",
-  "throw error": "ошибка"
+  "throw error": "ошибка",
+  "toggle": "Переключатель"
 }

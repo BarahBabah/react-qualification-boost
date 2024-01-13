@@ -1,11 +1,14 @@
 {
+  "ABOUT": "ABOUT",
   "About": "About",
   "An unexpected error has occurred": "An unexpected error has occurred",
+  "Main": "Main",
   "MainPage": "MainPage",
   "language": "language",
   "page-not-found": "page-not-found",
   "reload the page": "reload the page",
   "throw error": "throw error",
+  "toggle": "toggle",
   "О сайте": "О сайте",
   "Язык": "Язык"
 }
