@@ -1,8 +1,9 @@
 {
-  "Translate": "Translate",
-  "language": "English",
-  "An unexpected error has occurred": "An unexpected error has occurred",
-  "reload the page": "reload the page",
-  "throw error": "error",
-  "toggle": "toggle"
+    "Translate": "Translate",
+    "language": "English",
+    "shortlanguage": "En",
+    "An unexpected error has occurred": "An unexpected error has occurred",
+    "reload the page": "reload the page",
+    "throw error": "error",
+    "toggle": "toggle"
 }

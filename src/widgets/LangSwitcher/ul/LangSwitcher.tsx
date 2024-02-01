@@ -1,14 +1,15 @@
 import React from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from 'shared/ui/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button';
 import cls from './LangSwitcher.module.scss';
 
 interface LangSwitcherProps {
-  className?: string;
+    className?: string;
+    short?: boolean;
 }
 
-const LangSwitcher = ({ className }: LangSwitcherProps) => {
+const LangSwitcher = ({ className, short }: LangSwitcherProps) => {
     const { t, i18n } = useTranslation();
 
     function onClick() {
@@ -18,10 +19,10 @@ const LangSwitcher = ({ className }: LangSwitcherProps) => {
     return (
         <Button
             className={classNames(cls.LangSwitcher, {}, [className])}
-            theme={ThemeButton.CLEAR}
+            theme={ButtonTheme.CLEAR}
             onClick={() => onClick()}
         >
-            {t('language')}
+            {t(short ? 'shortlanguage' : 'language')}
         </Button>
     );
 };
