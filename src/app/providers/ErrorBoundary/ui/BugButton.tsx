@@ -5,26 +5,33 @@ import { Button } from 'shared/ui/Button';
 import { useTranslation } from 'react-i18next';
 
 interface BugButtonProps {
-   className?: string;
+    className?: string;
 }
-// КОМПОНЕНТ ДЛЯ ТЕСТИРОВАНИЯ
+
 const BugButton = () => {
     const { t } = useTranslation();
     const [error, setError] = useState(false);
-    const onThrow = () => setError(true);
+
+    const onThrow = () => {
+        try {
+            setError(true);
+        } catch (error) {
+            console.error('Error in BugButton:', error);
+        }
+    };
 
     useEffect(() => {
         if (error) {
-            throw new Error();
+            // Вызываем ошибку в блоке try/catch, чтобы ее можно было обработать ErrorBoundary
+            try {
+                throw new Error();
+            } catch (error) {
+                console.error('Error in BugButton:', error);
+            }
         }
     }, [error]);
-    return (
-        <Button
-            onClick={onThrow}
-        >
-            {t('throw error')}
-        </Button>
-    );
+
+    return <Button onClick={onThrow}>{t('throw error')}</Button>;
 };
 
 export default BugButton;
