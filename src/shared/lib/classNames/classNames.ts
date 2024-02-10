@@ -1,9 +1,5 @@
 type Mods = Record<string, boolean | string>;
 
-// const obj: Mods = {
-//   hovered: t,
-// };
-
 export function classNames(
     cls: string,
     mods: Mods = {},
@@ -17,6 +13,3 @@ export function classNames(
             .map(([className]) => className),
     ].join(' ');
 }
-// classNames("remove-btn", { hovered: true, selectable: true, red: false }, [
-//   "pdd",
-// ]);

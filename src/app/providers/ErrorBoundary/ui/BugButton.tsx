@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { useEffect, useState } from 'react';
 import { Button } from 'shared/ui/Button';
 import { useTranslation } from 'react-i18next';
 

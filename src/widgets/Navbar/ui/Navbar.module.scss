@@ -1,9 +1,10 @@
 .Navbar {
     width: 100%;
     height: var(--navbar-height);
+    background: var(--inverted-bg-color);
     display: flex;
-    background-color: var(--inverted-bg-color);
-    gap: 20px;
+    align-items: center;
+    padding: 20px;
 }
 
 .links {
@@ -11,9 +12,5 @@
 }
 
 .mainLink {
-    margin-right: 15px;
-}
-
-.aboutLink {
     margin-right: 15px;
 }
