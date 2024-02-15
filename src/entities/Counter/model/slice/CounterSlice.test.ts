@@ -18,7 +18,7 @@ describe('CounterSlice.test', () => {
         expect(counterReducer(undefined, counterActions.incremented())).toEqual(
             {
                 value: 1,
-            }
+            },
         );
     });
 });

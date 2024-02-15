@@ -19,7 +19,9 @@ interface ModalProps {
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
-    const { className, children, isOpen, onClose } = props;
+    const {
+        className, children, isOpen, onClose,
+    } = props;
 
     const { theme } = useTheme();
 
@@ -43,7 +45,7 @@ export const Modal = (props: ModalProps) => {
                 closeHandler();
             }
         },
-        [closeHandler]
+        [closeHandler],
     );
 
     const onContentClick = (e: React.MouseEvent) => {
@@ -67,7 +69,13 @@ export const Modal = (props: ModalProps) => {
     };
     return (
         <Portal>
-            <div className={classNames(cls.Modal, mods, [className, theme])}>
+            <div
+                className={classNames(cls.Modal, mods, [
+                    className,
+                    theme,
+                    'app_modal',
+                ])}
+            >
                 <div className={cls.overlay} onClick={closeHandler}>
                     <div className={cls.content} onClick={onContentClick}>
                         {children}

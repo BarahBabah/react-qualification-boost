@@ -6,8 +6,8 @@ import {
 } from '../lib/ThemeContext';
 
 interface useThemeResult {
-  handleTheme: () => void;
-  theme: Theme;
+    handleTheme: () => void;
+    theme: Theme;
 }
 export function useTheme(): useThemeResult {
     const { theme, setTheme } = useContext(ThemeContext);
