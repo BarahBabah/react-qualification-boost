@@ -5,16 +5,11 @@ import { SideBar } from 'widgets/SideBar';
 import { AppRouter } from './providers/router';
 import { useTheme } from './providers/ThemeProvider';
 
-export enum Theme {
-    LIGHT = 'light',
-    DARK = 'dark',
-}
-
 function App() {
     const { theme } = useTheme();
 
     return (
-        <div id="app-root" className={classNames('app', {}, [theme])}>
+        <div className={classNames('app', {}, [theme])}>
             <Suspense fallback="">
                 <Navbar />
                 <div className="content-page">

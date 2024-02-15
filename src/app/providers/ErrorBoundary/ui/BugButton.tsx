@@ -2,10 +2,6 @@ import { useEffect, useState } from 'react';
 import { Button } from 'shared/ui/Button';
 import { useTranslation } from 'react-i18next';
 
-interface BugButtonProps {
-    className?: string;
-}
-
 const BugButton = () => {
     const { t } = useTranslation();
     const [error, setError] = useState(false);
