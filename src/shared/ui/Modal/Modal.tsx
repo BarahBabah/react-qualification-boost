@@ -6,6 +6,7 @@ import React, {
     useState,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { useTheme } from 'app/providers/ThemeProvider';
 import cls from './Modal.module.scss';
 import Portal from '../Portal/Portal';
 
@@ -18,9 +19,9 @@ interface ModalProps {
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
-    const {
-        className, children, isOpen, onClose,
-    } = props;
+    const { className, children, isOpen, onClose } = props;
+
+    const { theme } = useTheme();
 
     const [isClosing, setIsClosing] = useState(false);
 
@@ -42,7 +43,7 @@ export const Modal = (props: ModalProps) => {
                 closeHandler();
             }
         },
-        [closeHandler],
+        [closeHandler]
     );
 
     const onContentClick = (e: React.MouseEvent) => {
@@ -65,8 +66,8 @@ export const Modal = (props: ModalProps) => {
         [cls.isClosing]: isClosing,
     };
     return (
-        <Portal element={document.querySelector('#app-root')}>
-            <div className={classNames(cls.Modal, mods, [className])}>
+        <Portal>
+            <div className={classNames(cls.Modal, mods, [className, theme])}>
                 <div className={cls.overlay} onClick={closeHandler}>
                     <div className={cls.content} onClick={onContentClick}>
                         {children}
