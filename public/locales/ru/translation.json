@@ -1,11 +1,13 @@
 {
-    "Translate": "Перевод",
-    "language": "Русский",
-    "shortlanguage": "Ru",
-    "An unexpected error has occurred": "Произошла непредвиденная ошибка",
-    "reload the page": "перезагрузить страницу",
-    "throw error": "ошибка",
-    "toggle": "Переключатель",
-    "AboutLink": "О сайте",
-    "MainLink": "Главная"
+  "Translate": "Перевод",
+  "language": "Русский",
+  "shortlanguage": "Ru",
+  "An unexpected error has occurred": "Произошла непредвиденная ошибка",
+  "reload the page": "перезагрузить страницу",
+  "throw error": "ошибка",
+  "toggle": "Переключатель",
+  "AboutLink": "О сайте",
+  "MainLink": "Главная",
+  "decrement": "убавить",
+  "increment": "прибавить"
 }

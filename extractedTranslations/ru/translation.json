@@ -6,6 +6,8 @@
   "Main": "Main",
   "MainLink": "MainLink",
   "MainPage": "MainPage",
+  "decrement": "decrement",
+  "increment": "increment",
   "page-not-found": "page-not-found",
   "reload the page": "reload the page",
   "throw error": "throw error",

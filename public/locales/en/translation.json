@@ -1,11 +1,13 @@
 {
-    "Translate": "Translate",
-    "language": "English",
-    "shortlanguage": "En",
-    "An unexpected error has occurred": "An unexpected error has occurred",
-    "reload the page": "reload the page",
-    "throw error": "error",
-    "toggle": "toggle",
-    "AboutLink": "About us",
-    "MainLink": "Main"
+  "Translate": "Translate",
+  "language": "English",
+  "shortlanguage": "En",
+  "An unexpected error has occurred": "An unexpected error has occurred",
+  "reload the page": "reload the page",
+  "throw error": "error",
+  "toggle": "toggle",
+  "AboutLink": "About us",
+  "MainLink": "Main",
+  "increment": "increment",
+  "decrement": "decrement"
 }
