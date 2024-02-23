@@ -9,5 +9,7 @@
   "AboutLink": "About us",
   "MainLink": "Main",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "Login": "Signin",
+  "Password": "Password"
 }

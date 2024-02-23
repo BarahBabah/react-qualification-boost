@@ -9,5 +9,7 @@
   "AboutLink": "О сайте",
   "MainLink": "Главная",
   "decrement": "убавить",
-  "increment": "прибавить"
+  "increment": "прибавить",
+  "Login": "Войти",
+  "Password": "Пароль"
 }
