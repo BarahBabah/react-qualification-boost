@@ -1,6 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { t } from 'i18next';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 import { User, userActions } from '../../../../../entities/User';
 
@@ -29,8 +28,6 @@ export const loginByUsername = createAsyncThunk<
         return response.data;
     } catch (e) {
         console.log(e);
-        return thunkAPI.rejectWithValue(
-            t('You have entered an incorrect username or password'),
-        );
+        return thunkAPI.rejectWithValue('error');
     }
 });
