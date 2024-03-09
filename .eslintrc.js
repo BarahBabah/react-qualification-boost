@@ -44,7 +44,7 @@ module.exports = {
                 markupOnly: true,
                 ignoreAttribute: ['data-testid', 'to'],
             }],
-        'max-len': ['error', { ignoreComments: true, code: 100 }],
+        'max-len': ['error', { ignoreComments: true, code: 120 }],
         'linebreak-style': 'off',
         // семантические
         'jsx-a11y/no-static-element-interactions': 'off',
