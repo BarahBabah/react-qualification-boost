@@ -9,6 +9,13 @@
     ],
     "users": [{ "id": "1", "username": "admin", "password": "123" }],
     "profile": {
-        "name": "typicode"
+        "first": "Lorem",
+        "lastname": "Ipsum",
+        "age": "22",
+        "currency": "KRW",
+        "country": "Hankook",
+        "city": "Seul",
+        "username": "admin",
+        "avatar": "https://www.scusd.edu/sites/main/files/main-images/camera_lense_0.jpeg"
     }
 }
