@@ -44,7 +44,7 @@ module.exports = {
                 markupOnly: true,
                 ignoreAttribute: ['data-testid', 'to'],
             }],
-        'max-len': ['error', { ignoreComments: true, code: 120 }],
+        'max-len': ['error', { ignoreComments: true, code: 140 }],
         'linebreak-style': 'off',
         // семантические
         'jsx-a11y/no-static-element-interactions': 'off',
@@ -55,6 +55,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         // immerjs
         'no-param-reassign': 'off',
+        'no-undef': 'off',
     },
     globals: {
         __IS_DEV__: true,

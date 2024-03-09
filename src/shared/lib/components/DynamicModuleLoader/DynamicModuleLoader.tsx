@@ -7,7 +7,6 @@ import { useDispatch, useStore } from 'react-redux';
 export type ReducersList = {
     [name in StateSchemaKey]?: Reducer;
 };
-type ReducersListEntry = [StateSchemaKey, Reducer];
 
 interface DynamicModuleLoaderProps {
     reducers: ReducersList;
@@ -20,18 +19,16 @@ const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
     const store = useStore() as ReduxStoreWithManager;
     const dispath = useDispatch();
     useEffect(() => {
-        Object.entries(reducers).forEach(([name, value]: ReducersListEntry) => {
-            store.reducerManager.add(name, value);
+        Object.entries(reducers).forEach(([name, value]) => {
+            store.reducerManager.add(name as StateSchemaKey, value);
             dispath({ type: `@INIT ${name} reducer` });
         });
         return () => {
             if (removeAfterUnmouth) {
-                Object.entries(reducers).forEach(
-                    ([name]: ReducersListEntry) => {
-                        store.reducerManager.remove(name);
-                        dispath({ type: `@DESTROY ${name} reducer` });
-                    },
-                );
+                Object.entries(reducers).forEach(([name]) => {
+                    store.reducerManager.remove(name as StateSchemaKey);
+                    dispath({ type: `@DESTROY ${name} reducer` });
+                });
             }
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
