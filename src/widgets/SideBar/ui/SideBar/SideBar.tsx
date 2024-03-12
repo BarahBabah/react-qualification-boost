@@ -5,7 +5,7 @@ import { LangSwitcher } from 'widgets/LangSwitcher';
 import { Button, ButtonTheme } from 'shared/ui/Button';
 import { ButtonSize } from 'shared/ui/Button/ui/Button';
 
-import { SideBarItemsList } from 'widgets/SideBar/model/item';
+import { SideBarItemsList } from '../../model/item';
 import cls from './SideBar.module.scss';
 import SideBarItem from './SideBarItem/SideBarItem';
 
