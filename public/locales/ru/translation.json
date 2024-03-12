@@ -8,11 +8,14 @@
   "toggle": "Переключатель",
   "AboutLink": "О сайте",
   "MainLink": "Главная",
+  "Profile": "Профиль",
   "decrement": "убавить",
   "increment": "прибавить",
   "Login": "Войти",
   "Password": "Пароль",
   "authorizationForm": "Форма авторизации",
   "You have entered an incorrect username or password": "Вы ввели неверный логин или пароль",
-  "logout": "Выйти"
+  "logout": "Выйти",
+  "Сurrency":"Валюта",
+  "Country":"Страна"
 }

@@ -4,5 +4,11 @@
   "firstname": "Имя",
   "lastname": "Фамилия",
   "An error occurred while uploading the profile": "Произошла ошибка при загрузке профиля",
-  "Try refreshing the page": "Попробуйте обновить страницу"
+  "Try refreshing the page": "Попробуйте обновить страницу",
+  "Username": "Имя пользователя",
+  "City": "Город",
+  "Age": "Возраст",
+  "Avatar": "Аватар",
+  "Save": "Сохранить",
+  "Сancel":"Отменить"
 }

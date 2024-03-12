@@ -8,11 +8,14 @@
   "toggle": "toggle",
   "AboutLink": "About us",
   "MainLink": "Main",
+  "Profile": "Profile",
   "increment": "increment",
   "decrement": "decrement",
   "Login": "Signin",
   "Password": "Password",
   "authorizationForm": "Authorization form",
   "You have entered an incorrect username or password": "You have entered an incorrect username or password",
-  "logout": "logout"
+  "logout": "logout",
+  "Сurrency":"Сurrency",
+  "Country":"Country"
 }
