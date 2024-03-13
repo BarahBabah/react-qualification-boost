@@ -10,5 +10,10 @@
   "Age": "Age",
   "Avatar": "Avatar",
   "Save": "Save",
-  "Сancel":"Сancel"
+  "Сancel": "Сancel",
+  "INCORRECT_USER_AGE": "Incorrect age",
+  "SERVER_ERROR": "Server error",
+  "INCORRECT_USER_COUNTRY": "Incorrect country",
+  "NO_DATA": "The data is not specified",
+  "INCORRECT_USER_DATA": "First and last name are required"
 }

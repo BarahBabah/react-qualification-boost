@@ -19,6 +19,7 @@ export const profileSlice = createSlice({
         },
         cancelEdit: (state) => {
             state.readonly = true;
+            state.validateError = undefined;
             state.form = state.data;
         },
         setReadonly: (state, action: PayloadAction<boolean>) => {
@@ -53,12 +54,13 @@ export const profileSlice = createSlice({
                     state.isLoading = false;
                     state.data = action.payload;
                     state.form = action.payload;
+                    state.validateError = undefined;
                     state.readonly = true;
                 },
             )
             .addCase(updateProfileData.rejected, (state, action) => {
                 state.isLoading = false;
-                state.error = action.payload;
+                state.validateError = action.payload;
             });
     },
 });
